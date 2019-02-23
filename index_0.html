@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="main">
+<head>
+    <meta charset="utf-8" />
+    <script src="libs/angular.min.js"></script>
+    <title>First AngurlarJs Page</title>
+    <script type="text/javascript">
+        var sample = angular.module("main", []);
+		sample.controller("sampleCtrl", ["$scope", function ($scope) {
+			$scope.message = "Hello, Wang Wei";
+		}]);
+    </script>
+</head>
+<body ng-controller="sampleCtrl">
+    <h2 ng-bind="message"></h2>
+    <h2>{{message}}</h2>
+    <input type="text" ng-model="message" />
+</body>
+</html>
+,

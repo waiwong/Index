@@ -1,1 +1,19 @@
-theme: jekyll-theme-architect
+# Site settings
+name: wangwei （王维）
+location: 珠海 (work at Macau)
+company: OCBC WH
+position: programer(asp.net)
+github: https://github.com/waiwong
+facebook: https://www.facebook.com/wai.wong.771282
+phone: 1580424XXXX
+email: waiwong02@outlook.com
+
+baseurl: "/resume.io"
+
+permalink: /:year/:month/:day/:title/
+
+exclude: ['README.md']
+
+# Build settings
+markdown: kramdown
+
