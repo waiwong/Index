@@ -25,20 +25,27 @@ Private Sub xlItems_ItemAdd(ByVal objItem As Object)
     Dim xlReply As MailItem
     Dim xStr As String
     If objItem.Class <> olMail Then Exit Sub
-    Set xlReply = objItem.Reply
     
+    Set xlReply = objItem.ReplyAll
     With xlReply
          xStr = "<p>" & "Hi, Your email has been received. Thank you!" & "</p>"
+         xStr = xStr & "<br />objItem.Subject: " & objItem.Subject
+         xStr = xStr & "<br />objItem.Sender:" & objItem.Sender
+         If objItem.CC <> Null Then
+            xStr = xStr & "<br />objItem.CC:" & objItem.CC
+         End If
+         
          .HTMLBody = xStr & .HTMLBody
-         .Send
+         '.Send
+         .Save
     End With
 End Sub
 
 ```
 </p>
 
-ref [links](https://www.datanumen.com/blogs/auto-reply-original-email-predefined-text-via-outlook-vba/)
-
+ref [source](https://www.datanumen.com/blogs/auto-reply-original-email-predefined-text-via-outlook-vba/)
+and [microsoft vba](https://docs.microsoft.com/en-us/office/vba/api/outlook.mailitem)
 
 ### Run in Developer Mode
 If you can see the Developer tab, you are running in developer mode. Otherwise, follow these steps to run in developer mode:
