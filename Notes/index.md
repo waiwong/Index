@@ -8,11 +8,11 @@ title: Notes
 This is an index for my **notes**. 
 
 ## Tech
-1. [Outlook Auto Reply](OutlookAutoReply.md) 
+1. [Outlook](outlook.md) 
 2. [SMPP](smpp.md)
 
 ## Email
-1. [phrase](email_phrasebank.md)
+1. [Phrase](email_phrasebank.md)
 
 
 ## Refs.
