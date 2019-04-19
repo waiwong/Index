@@ -1,13 +1,13 @@
-# Note for SMPP
+ï»¿# Note for SMPP
 
 ## 1. tip for Long SMS (no test yet, just for remark only)
 ```csharp
-// ²Î¿¼¡¶3GPP TS 23.040 V6.8.1 (2006-10).pdf¡·
+// å‚è€ƒã€Š3GPP TS 23.040 V6.8.1 (2006-10).pdfã€‹
 
 // Set UDHI Flag Data.SM_UDH_GSM=0x40
 request.setEsmClass((byte) Data.SM_UDH_GSM);
 
-// ÉèÖÃUDHÄÚÈİ
+// è®¾ç½®UDHå†…å®¹
 ByteBuffer ed = new ByteBuffer();
 ed.appendByte((byte) 5); // UDH Length
 ed.appendByte((byte) 0x00); // IE Identifier
@@ -17,7 +17,7 @@ ed.appendByte((byte) totalSegments); // Number of pieces
 ed.appendByte((byte) i); // Sequence number
 StringBuilder builder = new StringBuilder();
 
-// ½«¶ÌĞÅÄÚÈİ±àÂë
+// å°†çŸ­ä¿¡å†…å®¹ç¼–ç 
 try {
 	ed.appendString(message, encode);
 	request.setShortMessageData(ed);
