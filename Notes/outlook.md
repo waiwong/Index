@@ -65,7 +65,7 @@ If you can see the Developer tab, you are running in developer mode. Otherwise, 
 ### 2.1 Locating SelfCert.exe
 1. Office 365 64-bit : C:\Program Files\Microsoft Office\root\Office16
 2. Simply run SelfCert.exe after locating it by one of the methods listed above. It will prompt you to name the certificate. Personally, I use my username because that is the most convenient to me but you can also give it the name of your company or whatever you want.
-3. After pressing OK, you¡¯ll get a ¡°SelfCert Success¡± message.
+3. After pressing OK, you'll get a SelfCert Success message.
 ![](img/selfcert-create-digital-certificate-robert.png?raw=true)
 
 ### 2.2 Signing your code
@@ -73,21 +73,21 @@ Visual Basic buttonBack in the VBA Editor (ALT+F11) where you created the macro 
 
 Tools-> Digital Signature
 
-You¡¯ll see that the current VBA project isn¡¯t signed yet. Press the Choose¡­ button and you¡¯ll get a screen to select a certificate. Now you can choose the certificate you just created.
+You'll see that the current VBA project isn't signed yet. Press the Choose button and you'll get a screen to select a certificate. Now you can choose the certificate you just created.
 
 Choose the Digital Signature for your VBA project
 ![](img/selfcert-current-signature.png?raw=true)
 
 ### 2.3 Important!
-Now that we¡¯ve signed the code and verified that the security settings are set correctly, you must close Outlook. You¡¯ll get prompted if you want save changes to your VBA project. Choose ¡°Yes¡±. Once Outlook is fully closed start it again.
+Now that we've signed the code and verified that the security settings are set correctly, you must close Outlook. You'll get prompted if you want save changes to your VBA project. Choose Yes. Once Outlook is fully closed start it again.
 
 ### 2.4 Running your signed macro for the first time
-Select that you¡¯ll always trust the macros or documents from this publisher and you¡¯re done.
+Select that you'll always trust the macros or documents from this publisher and you're done.
 
 ![](img/sign-macro-trust-publisher.png?raw=true)
 
 ### 2.5 Verify your macro security level
-File-> Options-> Trust Center-> Trust Center Settings¡­-> Macro Settings-> option: Notifications for digitally signed macros, all other macros disabled
+File-> Options-> Trust Center-> Trust Center Settings-> Macro Settings-> option: Notifications for digitally signed macros, all other macros disabled
 
 [ref link](https://www.howto-outlook.com/howto/selfcert.htm)
 
