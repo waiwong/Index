@@ -30,3 +30,16 @@ try {
 
 ref [source](http://www.voidcn.com/article/p-qdnnuwvj-bck.html)
 
+
+## 2. SMPP simulator
+### 2.1 Start Simulator
+```Dos
+open SMPPSim/startsmppsim.bat
+```
+<p>After launch, http://127.0.0.1:88/ , check if the SMPPSim page display normal.</p>
+
+ref [source](https://blog.csdn.net/shulai123/article/details/68922174)
+
+### 2.2 Implement Sample of SMPP by .net
+
+ref [source](https://blog.csdn.net/gllzqfe/article/details/86149990) 
