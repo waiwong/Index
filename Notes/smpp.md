@@ -1,6 +1,7 @@
 ﻿# **Note for SMPP**
 
 ## 1. **Tip for Long SMS (no test yet, just for remark only)**
+
 ```csharp
 // 参考《3GPP TS 23.040 V6.8.1 (2006-10).pdf》
 
@@ -30,12 +31,14 @@ try {
 
 ref [source](http://www.voidcn.com/article/p-qdnnuwvj-bck.html)
 
-
 ## 2. **SMPP simulator**
+
 ### a. Start Simulator
+
 ```Dos
 open SMPPSim/startsmppsim.bat
 ```
+
 <p>After launch, http://127.0.0.1:88/ , check if the SMPPSim page display normal.</p>
 
 ref [source](https://blog.csdn.net/shulai123/article/details/68922174)
@@ -45,6 +48,7 @@ ref [source](https://blog.csdn.net/shulai123/article/details/68922174)
 ref [source](https://blog.csdn.net/gllzqfe/article/details/86149990) 
 
 ### 4. **Chinese SMS**
+
 <p>Change Chinese context to byte[] msgByte = Encoding.UTF8.GetBytes("中文字符").
 
 And check the length of msgByte, maybe need remove the first two bytes.</p>
