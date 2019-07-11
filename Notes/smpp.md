@@ -19,14 +19,14 @@ ed.appendByte((byte) i); // Sequence number
 StringBuilder builder = new StringBuilder();
 
 // 将短信内容编码
-try {
-	ed.appendString(message, encode);
-	request.setShortMessageData(ed);
-	return request;
-} catch (Exception e) {
-	
+try
+{
+    ed.appendString(message, encode);
+    request.setShortMessageData(ed);
+    return request;
+} catch (Exception e)
+{
 }
-
 ```
 
 ref [source](http://www.voidcn.com/article/p-qdnnuwvj-bck.html)
@@ -39,16 +39,20 @@ ref [source](http://www.voidcn.com/article/p-qdnnuwvj-bck.html)
 open SMPPSim/startsmppsim.bat
 ```
 
-<p>After launch, http://127.0.0.1:88/ , check if the SMPPSim page display normal.</p>
+After launch, <http://127.0.0.1:88> , check if the SMPPSim page display normal.
 
 ref [source](https://blog.csdn.net/shulai123/article/details/68922174)
 
 ### 3. **Implement Sample of SMPP by .net**
 
-ref [source](https://blog.csdn.net/gllzqfe/article/details/86149990) 
+ref [source](https://blog.csdn.net/gllzqfe/article/details/86149990)
 
 ### 4. **Chinese SMS**
 
-<p>Change Chinese context to byte[] msgByte = Encoding.UTF8.GetBytes("中文字符").
+Change Chinese context to byte[] messageByte = Encoding.UTF8.GetBytes("中文字符").
 
-And check the length of msgByte, maybe need remove the first two bytes.</p>
+And check the length of messageByte, maybe need remove the first two bytes.
+
+### 5. **Other Notes**
+
+Normally, the no of message send via SMPP is 5 per second. And this service can upgrade to 150 per second.
