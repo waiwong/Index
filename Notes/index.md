@@ -8,8 +8,10 @@ title: Notes
 This is an index for my **notes**. 
 
 ## Tech
+
 1. [Outlook](outlook.md) 
 2. [SMPP](smpp.md)
+3. [Others](others.md)
 
 ## Email
 1. [Phrase](email_phrasebank.md)
