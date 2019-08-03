@@ -43,6 +43,14 @@ After launch, <http://127.0.0.1:88> , check if the SMPPSim page display normal.
 
 ref [source](https://blog.csdn.net/shulai123/article/details/68922174)
 
+### b. Maybe need update the configuration file (conf/smppsim.props) as follow:
+
+1. By default the SMPP simulator tries to open port 88 for it’s HTTP console, since need administrative rights to open ports lower than 1024, then change that to 8080 instead. 
+   Line 60 “HTTP_PORT=88” to "HTTP_PORT=8080";
+2. Another change is on line 83 "ESME_TO_ESME=TRUE" to "ESME_TO_ESME=FALSE".
+3. line 69, change to OUTBIND_ENABLED=true
+   
+
 ### 3. **Implement Sample of SMPP by .net**
 
 ref [source](https://blog.csdn.net/gllzqfe/article/details/86149990)
@@ -56,3 +64,4 @@ And check the length of messageByte, maybe need remove the first two bytes.
 ### 5. **Other Notes**
 
 Normally, the no of message send via SMPP is 5 per second. And this service can upgrade to 150 per second.
+
