@@ -86,10 +86,13 @@ The following code use to hook the AfterExecute command in SSMS.
 
 ``` CSharp
 
+//if current user without amdin permission, the DTE2 and CommandEvenet should declare as class private member.
+private DTE2 _dte；
+private CommandEvents cmeExecQuery;
+
 // add to InitializeAsync of XXXPackage class.
-DTE2 _dte = Package.GetGlobalService(typeof(SDTE)) as DTE2;
-CommandEvents commandEvents = _dte.Events.get_CommandEvents(null, 0);
-CommandEvents cmeExecQuery = _dte.Events.get_CommandEvents("{52692960-56BC-4989-B5D3-94C47A513E8D}", 1);
+_dte = Package.GetGlobalService(typeof(SDTE)) as DTE2;
+cmeExecQuery = _dte.Events.get_CommandEvents("{52692960-56BC-4989-B5D3-94C47A513E8D}", 1);
 cmeExecQuery.AfterExecute += new _dispCommandEvents_AfterExecuteEventHandler(commandEvents_AfterExecute);
 
 //the command handler as follow. 
@@ -106,8 +109,9 @@ private void commandEvents_AfterExecute(string Guid, int ID, object CustomIn, ob
     if (docName.StartsWith("~vs"))
         docName = "NoDocName";
     string execText = execText = startPoint.GetText(endPoint).Trim();
+    //TODO: log the exec text to database for further check.
 }
-      
+
 ```
 
 
