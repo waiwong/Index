@@ -114,4 +114,15 @@ private void commandEvents_AfterExecute(string Guid, int ID, object CustomIn, ob
 
 ```
 
+## 5. Doc to Markdown
 
+Convert .doc(x) to .md by pandoc by following command:
+
+``` Batch
+pandoc -s example30.docx --no-wrap --reference-links -t markdown -o example35.md
+```
+
+>"--no-wrap" for avoid 80 characters per line. 
+"--reference-links" for use reference-style links, rather than inline links
+
+More details please refer the option page: http://pandoc.org/README.html#reader-options
