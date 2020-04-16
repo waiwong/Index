@@ -14,19 +14,19 @@ The user gets the UAC prompt when they start the program. Use wisely; their pati
 
 use function <strong><em>some</em></strong>.
 
-``` Javascript
+```Javascript
 arr.some(el => el.username === name);
 // for IE, not support Lambda, use function(x)
 arr.some(function(el) { return el.username === name});
 
-var f = (a) => {a.some1(); this.some2();}; 
+var f = (a) => {a.some1(); this.some2();};
 // for IE
 var f = function(a) {a.some1(); this.some2();}.bind(this);
 ```
 
 ## 3. execute a JavaScript function by its name as a string
 
-``` Javacript
+```Javacript
 window["functionName"](arguments);
 //if have namespace
 window["My"]["Namespace"]["functionName"](arguments);
@@ -34,7 +34,7 @@ window["My"]["Namespace"]["functionName"](arguments);
 
 In order to make that easier and provide some flexibility, here is a convenience function:
 
-``` Javascript
+```Javascript
 function executeFunctionByName(functionName, context /*, args */) {
   var args = Array.prototype.slice.call(arguments, 2);
   var namespaces = functionName.split(".");
@@ -79,12 +79,11 @@ Following command for install and uninstall
 
 ```
 
-
 ### b. More
 
 The following code use to hook the AfterExecute command in SSMS.
 
-``` CSharp
+```CSharp
 
 //if current user without amdin permission, the DTE2 and CommandEvenet should declare as class private member.
 private DTE2 _dte；
@@ -95,7 +94,7 @@ _dte = Package.GetGlobalService(typeof(SDTE)) as DTE2;
 cmeExecQuery = _dte.Events.get_CommandEvents("{52692960-56BC-4989-B5D3-94C47A513E8D}", 1);
 cmeExecQuery.AfterExecute += new _dispCommandEvents_AfterExecuteEventHandler(commandEvents_AfterExecute);
 
-//the command handler as follow. 
+//the command handler as follow.
 private void commandEvents_AfterExecute(string Guid, int ID, object CustomIn, object CustomOut)
 {
     Microsoft.VisualStudio.Shell.ThreadHelper.ThrowIfNotOnUIThread();
@@ -118,11 +117,11 @@ private void commandEvents_AfterExecute(string Guid, int ID, object CustomIn, ob
 
 Convert .doc(x) to .md by pandoc by following command:
 
-``` Batch
+```Batch
 pandoc -s example30.docx --no-wrap --reference-links -t markdown -o example35.md
 ```
 
->"--no-wrap" for avoid 80 characters per line. 
-"--reference-links" for use reference-style links, rather than inline links
+- "--no-wrap" for avoid 80 characters per line.
+- "--reference-links" for use reference-style links, rather than inline links
 
 More details please refer the option page: http://pandoc.org/README.html#reader-options
