@@ -11,8 +11,8 @@ This is an index for my **notes**.
 
 1. [Outlook](outlook.md)
 2. [SMPP](smpp.md)
-3. [C#](csharp.md)
-4. [Others](others.md)
+3. [Others](others.md)
+4. [Excel VBA](excelVBA.md)
 
 ## Email
 
